@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom'; // pulls a single method called render from react-dom object.
 import { AppContainer } from 'react-hot-loader';
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/musiclist.scss';
 
-import TestComponent from './testcomponent';
+import Template from './components/Template';
 
 /* render(
   // showCount is a Boolean and count is a number
@@ -19,10 +21,10 @@ const renderApp = (Component) => {
   );
 };
 
-renderApp(TestComponent);
+renderApp(Template);
 
 if (module && module.hot) {
-  module.hot.accept('./testcomponent', () => {
-    renderApp(TestComponent);
+  module.hot.accept('./components/Template', () => {
+    renderApp(Template);
   });
 }
